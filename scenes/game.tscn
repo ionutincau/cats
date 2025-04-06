@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://di38dgsqflpej"]
+[gd_scene load_steps=8 format=4 uid="uid://di38dgsqflpej"]
 
+[ext_resource type="PackedScene" uid="uid://cy4cvb054mpcj" path="res://scenes/game_manager.tscn" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b311kj5m8hpfv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cqgjbiugchj3y" path="res://assets/sprites/grassland.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dljf6illtqv77" path="res://scenes/coin.tscn" id="3_lnu2h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lnu2h"]
+font_size = 9
+shadow_size = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -590,11 +595,23 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="Game" type="Node2D"]
 
+[node name="game_manager" parent="." instance=ExtResource("1_lbhrr")]
+unique_name_in_owner = true
+
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="score_label" type="Label" parent="Player/Camera2D"]
+unique_name_in_owner = true
+offset_left = -139.0
+offset_top = -78.0
+offset_right = -106.0
+offset_bottom = -65.0
+text = "coins: 0"
+label_settings = SubResource("LabelSettings_lnu2h")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD//wAAAAADAAAAAAAAAAAAAAADAAAAAAABAAAAAAADAAAAAAAAAAEAAAAEAAUAAAABAAEAAAAEAAUAAAABAAIAAAAEAAcAAAD9/wAAAAAEAAEAAAD+/wAAAAADAAAAAAD+////AAAQAAAAAAACAAEAAAADAAIAAAAEAAIAAAADAAIAAAAFAAIAAAADAAIAAAAGAAIAAAADAAIAAAAHAAIAAAADAAIAAAAHAAMAAAADAAIAAAAIAAMAAAADAAIAAAAJAAMAAAADAAIAAAAKAAMAAAADAAIAAAAKAAIAAAADAAIAAAACAAIAAAADAAwAAAADAAIAAAADAAwAAAAAAAIAAAADAAcAAAD//wEAAAADAAcAAAD//wIAAAADAAcAAAADAAAAAAAKAAAAAAACAAAAAAADAAAAAAAEAAEAAAALAAEAAAADAAEAAAAKAAEAAAAEAAAAAAALAAAAAAAFAAEAAAADAAAAAAAGAAEAAAADAAAAAAAHAAEAAAADAAAAAAAKAAEAAAADAAAAAAAIAAIAAAAIAAgAAAAJAAIAAAAIAAgAAAAIAAEAAAAIAAgAAAAJAAEAAAAIAAgAAAAGAAAAAAARAAMAAAA=")
