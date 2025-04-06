@@ -4,10 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b311kj5m8hpfv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cqgjbiugchj3y" path="res://assets/sprites/grassland.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dljf6illtqv77" path="res://scenes/coin.tscn" id="3_lnu2h"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_lnu2h"]
-font_size = 9
-shadow_size = 0
+[ext_resource type="PackedScene" uid="uid://cgklrxx6ch7dj" path="res://scenes/ui.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -595,7 +592,7 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="Game" type="Node2D"]
 
-[node name="game_manager" parent="." instance=ExtResource("1_lbhrr")]
+[node name="GameManager" parent="." instance=ExtResource("1_lbhrr")]
 unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
@@ -604,21 +601,17 @@ unique_name_in_owner = true
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="score_label" type="Label" parent="Player/Camera2D"]
-unique_name_in_owner = true
-offset_left = -139.0
-offset_top = -78.0
-offset_right = -106.0
-offset_bottom = -65.0
-text = "coins: 0"
-label_settings = SubResource("LabelSettings_lnu2h")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD//wAAAAADAAAAAAAAAAAAAAADAAAAAAABAAAAAAADAAAAAAAAAAEAAAAEAAUAAAABAAEAAAAEAAUAAAABAAIAAAAEAAcAAAD9/wAAAAAEAAEAAAD+/wAAAAADAAAAAAD+////AAAQAAAAAAACAAEAAAADAAIAAAAEAAIAAAADAAIAAAAFAAIAAAADAAIAAAAGAAIAAAADAAIAAAAHAAIAAAADAAIAAAAHAAMAAAADAAIAAAAIAAMAAAADAAIAAAAJAAMAAAADAAIAAAAKAAMAAAADAAIAAAAKAAIAAAADAAIAAAACAAIAAAADAAwAAAADAAIAAAADAAwAAAAAAAIAAAADAAcAAAD//wEAAAADAAcAAAD//wIAAAADAAcAAAADAAAAAAAKAAAAAAACAAAAAAADAAAAAAAEAAEAAAALAAEAAAADAAEAAAAKAAEAAAAEAAAAAAALAAAAAAAFAAEAAAADAAAAAAAGAAEAAAADAAAAAAAHAAEAAAADAAAAAAAKAAEAAAADAAAAAAAIAAIAAAAIAAgAAAAJAAIAAAAIAAgAAAAIAAEAAAAIAAgAAAAJAAEAAAAIAAgAAAAGAAAAAAARAAMAAAA=")
 tile_set = SubResource("TileSet_lbhrr")
 
-[node name="coin" parent="." instance=ExtResource("3_lnu2h")]
+[node name="coins" type="Node" parent="."]
+
+[node name="coin" parent="coins" instance=ExtResource("3_lnu2h")]
 position = Vector2(144, 7)
 
-[node name="coin2" parent="." instance=ExtResource("3_lnu2h")]
+[node name="coin2" parent="coins" instance=ExtResource("3_lnu2h")]
 position = Vector2(37, -9)
+
+[node name="Ui" parent="." instance=ExtResource("5_iywne")]
+unique_name_in_owner = true
