@@ -6,7 +6,15 @@
 
 ### [tileset](https://anokolisa.itch.io/basic-140-tiles-grassland-and-mines)
 
+
+
+# Sounds
+
 ### [coin pickup sound](https://pixabay.com/sound-effects/search/coin/)
+
+### [game over](https://pixabay.com/sound-effects/game-over-arcade-6435)
+
+
 
 # AI Generated
 
