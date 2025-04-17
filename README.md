@@ -2,6 +2,8 @@
 
 ### [cat](https://bowpixel.itch.io/meow-cat-85-animation)
 
+### [enemy](https://zerie.itch.io/tiny-rpg-character-asset-pack)
+
 ### [tileset](https://anokolisa.itch.io/basic-140-tiles-grassland-and-mines)
 
 ### [coin pickup sound](https://pixabay.com/sound-effects/search/coin/)
