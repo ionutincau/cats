@@ -596,6 +596,10 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="Game" type="Node2D"]
 
+[node name="Ui" parent="." instance=ExtResource("5_iywne")]
+unique_name_in_owner = true
+visible = false
+
 [node name="GameManager" parent="." instance=ExtResource("1_lbhrr")]
 unique_name_in_owner = true
 
@@ -608,27 +612,25 @@ limit_bottom = 100
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="Enemy" parent="." instance=ExtResource("6_p57ef")]
+position = Vector2(120, -32)
+
+[node name="World" type="Node" parent="."]
+
+[node name="Coins" type="Node" parent="World"]
+
+[node name="coin" parent="World/Coins" instance=ExtResource("3_lnu2h")]
+position = Vector2(142.8, 5)
+
+[node name="coin2" parent="World/Coins" instance=ExtResource("3_lnu2h")]
+position = Vector2(39, -11)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="World"]
 tile_map_data = PackedByteArray("AAD9/wAAAAAEAAEAAAD+////AAAQAAAAAAD+/wAAAAADAAAAAAD//wAAAAADAAAAAAD//wEAAAADAAcAAAD//wIAAAADAAcAAAAAAAAAAAADAAAAAAAAAAEAAAAEAAUAAAAAAAIAAAADAAcAAAABAAAAAAADAAAAAAABAAEAAAAEAAUAAAABAAIAAAAEAAcAAAACAAAAAAADAAAAAAACAAEAAAADAAIAAAACAAIAAAADAAwAAAADAAAAAAAKAAAAAAADAAEAAAAKAAEAAAADAAIAAAADAAwAAAAEAAAAAAALAAAAAAAEAAEAAAALAAEAAAAEAAIAAAADAAIAAAAFAAEAAAADAAAAAAAFAAIAAAADAAIAAAAGAAAAAAARAAMAAAAGAAEAAAADAAAAAAAGAAIAAAADAAIAAAAHAAEAAAADAAAAAAAHAAIAAAADAAIAAAAHAAMAAAADAAIAAAAIAAEAAAAIAAgAAAAIAAIAAAAIAAgAAAAIAAMAAAADAAIAAAAJAAEAAAAIAAgAAAAJAAIAAAAIAAgAAAAJAAMAAAADAAIAAAAKAAEAAAADAAAAAAAKAAIAAAADAAIAAAAKAAMAAAADAAIAAAA=")
 tile_set = SubResource("TileSet_lbhrr")
 
-[node name="coins" type="Node" parent="."]
-
-[node name="coin" parent="coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(142.8, 5)
-
-[node name="coin2" parent="coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(39, -11)
-
-[node name="Ui" parent="." instance=ExtResource("5_iywne")]
-unique_name_in_owner = true
-visible = false
-
-[node name="Node2D" parent="." instance=ExtResource("6_p57ef")]
-position = Vector2(116, -23)
-
-[node name="Killzone" parent="." instance=ExtResource("7_u5sy4")]
+[node name="Killzone" parent="World" instance=ExtResource("7_u5sy4")]
 position = Vector2(0, 104)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Killzone"]
 shape = SubResource("WorldBoundaryShape2D_gee14")
