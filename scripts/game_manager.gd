@@ -11,6 +11,9 @@ func add_coin():
 	coins += 1
 	update_score_label()
 
-
 func update_score_label():
 	score_label.text = "x" + str(coins)
+
+func reset():
+	coins = 0
+	update_score_label()
