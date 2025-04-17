@@ -85,7 +85,7 @@ frame_progress = 0.956609
 shape = SubResource("CircleShape2D_4ra3w")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-target_position = Vector2(22, 0)
+target_position = Vector2(15, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-22, 0)
+target_position = Vector2(-15, 0)
