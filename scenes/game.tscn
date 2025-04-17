@@ -592,7 +592,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="Game" type="Node2D"]
-position = Vector2(260, 161)
 
 [node name="GameManager" parent="." instance=ExtResource("1_lbhrr")]
 unique_name_in_owner = true
@@ -600,7 +599,10 @@ unique_name_in_owner = true
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 0)
 zoom = Vector2(4, 4)
+limit_bottom = 100
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -610,13 +612,14 @@ tile_set = SubResource("TileSet_lbhrr")
 [node name="coins" type="Node" parent="."]
 
 [node name="coin" parent="coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(402.8, 166)
+position = Vector2(142.8, 5)
 
 [node name="coin2" parent="coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(299, 150)
+position = Vector2(39, -11)
 
 [node name="Ui" parent="." instance=ExtResource("5_iywne")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Node2D" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(116, -23)
