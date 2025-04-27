@@ -1,7 +1,8 @@
 extends Node2D
 
 const BULLET_TIMEOUT = 10
-const BULLET_PLAYER_OFFSET = 10
+const BULLET_X_OFFSET = 10
+const BULLET_Y_OFFSET = -10
 
 @onready var game: Node2D = $".."
 @onready var player: CharacterBody2D = %Player
@@ -25,7 +26,8 @@ func create_bullet() -> Node:
 	var direction = player.moving_direction
 	bullet.direction = direction
 	bullet.position = player.position
-	bullet.position.x += BULLET_PLAYER_OFFSET * direction
+	bullet.position.x += BULLET_X_OFFSET * direction
+	bullet.position.y += BULLET_Y_OFFSET
 	game.add_child.call_deferred(bullet)
 
 	return bullet
