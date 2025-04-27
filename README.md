@@ -22,9 +22,23 @@
 
 tool: Gemini
 
+model: 2.0 Flash
+
 prompt:
 
 - I am making a game, the theme is Japan with cherry blossoms, please make an image of a coin that matches this description
 - now make it more simple and cartoonish
+
+---
+
+### bullet
+
+tool: Gemini
+
+model: 2.0 Flash
+
+prompt:
+
+- generate a transparent image of a ball of furr
 
 ---
