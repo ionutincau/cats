@@ -1,6 +1,5 @@
 extends Node2D
 
-#const BULLET_TIMEOUT = 10
 const BULLET_X_OFFSET = 10
 const BULLET_Y_OFFSET = -10
 
@@ -15,12 +14,9 @@ func _process(_delta: float) -> void:
 
 func fire():
 	fire_sound.play()
+	create_bullet()
 
-	var bullet = create_bullet()
-	#await get_tree().create_timer(BULLET_TIMEOUT).timeout
-	#bullet.queue_free()
-
-func create_bullet() -> Node:
+func create_bullet():
 	var bullet = bullet_scene.instantiate()
 
 	var direction = player.moving_direction
@@ -30,5 +26,3 @@ func create_bullet() -> Node:
 	bullet.position.y += BULLET_Y_OFFSET
 
 	game.add_child.call_deferred(bullet)
-
-	return bullet
