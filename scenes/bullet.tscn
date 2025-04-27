@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfrorouays5v5"]
+[gd_scene load_steps=4 format=3 uid="uid://dfrorouays5v5"]
 
 [ext_resource type="Texture2D" uid="uid://dne31mwmh50ok" path="res://assets/images/bullet.png" id="1_mkf8s"]
+[ext_resource type="Script" uid="uid://2smjp7ourhy7" path="res://scripts/bullet.gd" id="1_y25gk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y25gk"]
 radius = 5.0
 
 [node name="Bullet" type="CharacterBody2D"]
+script = ExtResource("1_y25gk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.024, 0.024)
