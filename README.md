@@ -1,3 +1,8 @@
+# Layers
+
+1. all
+2. coins
+
 # Resources
 
 ### [cat](https://bowpixel.itch.io/meow-cat-85-animation)
