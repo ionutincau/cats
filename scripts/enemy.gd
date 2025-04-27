@@ -3,6 +3,7 @@ extends Node2D
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 const SPEED = 30
 
@@ -20,4 +21,4 @@ func _process(delta: float) -> void:
 	position.x += direction * SPEED * delta
 
 func _on_damage_area_area_entered(_area: Area2D) -> void:
-	queue_free()
+	animation_player.play("enemy-dies")
