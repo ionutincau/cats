@@ -2,6 +2,8 @@
 
 1. all
 2. coins
+3. enemies
+4. bullets
 
 # Resources
 

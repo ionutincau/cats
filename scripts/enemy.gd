@@ -18,3 +18,6 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.flip_h = false
 
 	position.x += direction * SPEED * delta
+
+func _on_damage_area_area_entered(_area: Area2D) -> void:
+	queue_free()
