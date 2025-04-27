@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cgklrxx6ch7dj" path="res://scenes/ui.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bk63n57jh7v1b" path="res://scenes/enemy.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cyqqhb56vr6sy" path="res://scenes/killzone.tscn" id="7_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://dfrorouays5v5" path="res://scenes/bullet.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://ssvh0ow670nu" path="res://scenes/gun.tscn" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -605,6 +605,7 @@ visible = false
 unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+unique_name_in_owner = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 0)
@@ -636,5 +637,4 @@ position = Vector2(0, 104)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Killzone"]
 shape = SubResource("WorldBoundaryShape2D_gee14")
 
-[node name="Bullet" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(70, -50)
+[node name="Gun" parent="." instance=ExtResource("9_0tnpc")]
