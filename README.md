@@ -17,11 +17,13 @@
 
 # Sounds
 
-### [coin pickup sound](https://pixabay.com/sound-effects/search/coin/)
+### [coin pickup](https://pixabay.com/sound-effects/search/coin/)
 
 ### [gun firing](https://mixkit.co/free-sound-effects/bubbles/)
 
 ### [game over](https://pixabay.com/sound-effects/game-over-arcade-6435)
+
+### [enemy dies](https://mixkit.co/free-sound-effects/break/)
 
 
 
