@@ -12,6 +12,8 @@
 
 ### [coin pickup sound](https://pixabay.com/sound-effects/search/coin/)
 
+### [gun firing](https://mixkit.co/free-sound-effects/bubbles/)
+
 ### [game over](https://pixabay.com/sound-effects/game-over-arcade-6435)
 
 
