@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvnvh7lb7w258"]
+
+[ext_resource type="AudioStream" uid="uid://dy0uhkwom2mf1" path="res://assets/sounds/japan chill.mp3" id="1_05ggv"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_05ggv")
+autoplay = true
+bus = &"Music"

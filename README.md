@@ -29,6 +29,18 @@
 
 # AI Generated
 
+### background music
+
+tool: Suno
+
+model: 3.5
+
+prompt:
+
+- please generate background music for a game, japan cherry blossom style, no vocals, chill
+
+---
+
 ### coin
 
 tool: Gemini
